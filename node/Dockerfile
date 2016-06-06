@@ -1,14 +1,8 @@
 # Set the base image to Ubuntu
-FROM    ubuntu
+FROM node:0.10.45
 
 # File Author / Maintainer
-MAINTAINER Anand Mani Sankar
-
-# Install Node.js and other dependencies
-RUN apt-get update && \
-    apt-get -y install curl && \
-    curl -sL https://deb.nodesource.com/setup | sudo bash - && \
-    apt-get -y install python build-essential nodejs
+MAINTAINER Theodoros Ploumis
 
 # Install nodemon
 RUN npm install -g nodemon

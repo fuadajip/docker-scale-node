@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "author": "Anand Mani Sankar",
+  "author": "Theodoros Ploumis",
   "license": "ISC",
   "dependencies": {
     "express": "^4.12.3",
