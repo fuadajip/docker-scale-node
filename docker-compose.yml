@@ -12,6 +12,8 @@ node1:
       - redis
     ports:
       - "8080"
+    volumes:
+      - ./node/index.js:/src/index.js
 node2:
     build: ./node
     links:

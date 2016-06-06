@@ -1,5 +1,5 @@
 # Set the base image to Ubuntu
-FROM node:0.10.45
+FROM node:0.12.14-wheezy
 
 # File Author / Maintainer
 MAINTAINER Theodoros Ploumis
