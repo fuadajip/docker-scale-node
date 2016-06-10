@@ -7,13 +7,14 @@ MAINTAINER Theodoros Ploumis
 # Install nodemon
 RUN npm install -g nodemon
 
-# Provides cached layer for node_modules
-ADD package.json /tmp/package.json
-RUN cd /tmp && npm install
-RUN mkdir -p /src && cp -a /tmp/node_modules /src/
-
-# Define working directory
+RUN mkdir /src
 WORKDIR /src
+
+# Provides cached layer for node_modules
+ADD package.json /src/package.json
+RUN npm set progress=false && npm install
+
+# Now add files again
 ADD . /src
 
 # Expose port
